@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Quote Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js" type="text/javascript"></script>   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item site-logo">
+                <h1 class="site-logo__text">My Random Quote Generator Site</h1>
+                </li>
+                <li class="navigation__item">
+                <a href="#" id="js-button" class="btn btn-default" data-generate-btn>Generate another quote</a>
+                </li>
+            </ul>
+            </nav>
+        </header>
+        <div class="body" data-container>
+
+        </div>
+    </div>
+    
+    <script src="rqg.js" type="text/javascript"></script>
+
+    <script id="template" type="text/x-handlebars-template">
+        <blockquote class="quote" cite="{{link}}">
+            <div class="quote__body">{{{content}}}</div>
+            <footer class="quote__footer">
+            <cite class="quote__cite">{{title}}</cite>
+            <a href="https://twitter.com/intent/tweet?url={{link}}" class="btn-tweet btn btn-primary">Tweet</a>
+            </footer>
+        </blockquote>
+    </script>
+    
+</body>
+</html>
