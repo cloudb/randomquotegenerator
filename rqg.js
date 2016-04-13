@@ -24,7 +24,6 @@ var RQG = (function() {
 
     container = document.querySelector("[" + defaults.container + "]");
     button = document.querySelector("[" + defaults.button + "]");
-    console.log(button);
 
     _addEventListener();
     _getQuote();
@@ -45,6 +44,7 @@ var RQG = (function() {
 
     var xhr = $.ajax({
       url: API_URL,
+      cache: false,
       success: function(data) {
         if (data[0].hasOwnProperty("ID")) {
           _populateTemplate(data[0]);
