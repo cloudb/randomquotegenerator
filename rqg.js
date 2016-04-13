@@ -44,6 +44,7 @@ var RQG = (function() {
 
     var xhr = $.ajax({
       url: API_URL,
+      cache: false,
       success: function(data) {
         if (data[0].hasOwnProperty("ID")) {
           _populateTemplate(data[0]);
