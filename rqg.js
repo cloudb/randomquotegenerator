@@ -24,7 +24,6 @@ var RQG = (function() {
 
     container = document.querySelector("[" + defaults.container + "]");
     button = document.querySelector("[" + defaults.button + "]");
-    console.log(button);
 
     _addEventListener();
     _getQuote();
